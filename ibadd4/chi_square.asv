@@ -1,0 +1,4 @@
+function x = chi_square(m,n)
+
+for i = 1:m
+    

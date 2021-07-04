@@ -1,0 +1,15 @@
+U = diff_num(8,256,0.5);
+
+for m = [ 2^3 2^4 2^5 2^6 2^7 2^8 ]
+    figure(m)
+    fplot(@(X) U_a(X,m/128,10),[0 1],'b')
+    hold on
+    x = 0:0.125:1 ;
+    u = U(8*x+1,m+1) ;
+    plot(x,u,'r')
+    hold off
+    
+    xlabel('Length')
+    ylabel('Temperature')
+    legend('Analytic solution','Numerical solution')
+end

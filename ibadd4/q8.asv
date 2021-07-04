@@ -1,0 +1,7 @@
+theta_0 = 2.2;
+N = 200;
+n = 10;
+
+for i = 1:N
+    [x(i) , theta_mle ] = gamma_2(n, theta_0)
+    

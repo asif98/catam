@@ -1,0 +1,6 @@
+for m = [ 1 5 40 ]
+    for n = [ 100 300 500 ]
+        y = chi_square(m,n);
+        histogram(y,20)
+    end
+end
