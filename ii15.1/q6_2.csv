@@ -1,0 +1,6 @@
+ k , sum(primes) , fermat_pseudo3 , euler_pseudo3 , strong_pseudo3 
+5, 8392, 28, 16, 7 
+6, 7216, 13, 9, 3 
+7, 6241, 5, 4, 0 
+8, 5411, 1, 1, 1 
+9, 4832, 0, 0, 0 

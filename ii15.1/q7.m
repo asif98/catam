@@ -1,0 +1,55 @@
+fprintf('best method \n')
+tic
+
+p = zeros(1,10^5) ;
+p(1) = 0 ;
+p(2) = 1 ;
+p(3) = 1 ;
+
+for N = 4:10^5
+    if strong_test(2,N) == 1
+        if strong_test(3,N) == 1
+            p(N) = 1;
+        end
+    end
+end
+
+q = find(p) ;
+
+M = randi([3 10^10],1,10000);
+K = zeros(1,length(M));
+
+for i = 1 : length(M)
+    if M(i) < 10^5 + 1
+        if ismember(M(i),q) == 1
+            K(i) = 1 ;
+        end
+        
+    else
+        if strong_test(2,M(i)) == 1
+            if strong_test(3,M(i)) == 1
+                K(i) = 1;
+                
+                j = 1;
+                while q(j) < sqrt(M(i))
+                    if mod(M(i),q(j)) == 0
+                        K(i) = 0 ;
+                        break
+                    else
+                        j = j + 1;
+                    end
+                end
+            end
+        end
+    end
+end
+toc
+
+fprintf('trial division \n')
+
+tic
+L = zeros(1,length(M));
+for i = 1 : length(M)
+    L(i) = prime_td(M(i));
+end
+toc
