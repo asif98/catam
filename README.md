@@ -1,2 +1,2 @@
 #catam
-These are the projects I did in my 1st and 2nd year of maths degree at University of Cambridge.
+These are the projects I did in my 2nd and 3rd year of maths degree at University of Cambridge.
